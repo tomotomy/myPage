@@ -15,8 +15,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <img src="/images/timeRefine/1.png" className={styles.mainImage}/>
       <main className={styles.main}>
+        <div className={styles.appHeading}>
+          <img src="/images/timeRefine/icon.png" className={styles.logoImage} />
+          <Typography variant="h4">
+            記録タイマー
+          </Typography>
+        </div>
+        <img src="/images/timeRefine/1.png" className={styles.mainImage}/>
       </main>
     </div>
   )
