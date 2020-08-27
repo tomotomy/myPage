@@ -4,7 +4,7 @@ import styles from '../../styles/Home.module.css'
 import CopyrightIcon from '@material-ui/icons/Copyright'
 
 
-const input =`
+const usage =`
 
 
 ### 利用規約
@@ -69,6 +69,71 @@ const input =`
 本サービスに関して紛争が生じた場合には，当社の本店所在地を管轄する裁判所を専属的合意管轄とします。
 `
 
+const policy = `
+### プライバシーポリシー
+
+本アプリ「記録タイマー」は、ユーザーの個人情報保護の重要性について認識し、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）を遵守すると共に、以下のプライバシーポリシー（以下「本プライバシーポリシー」といいます。）に従い、適切な取扱い及び保護に努めます。
+
+### 個人情報の利用目的
+
+* 当社サービスの提供のため
+* 当社サービスに関するご案内、お問い合せ等への対応のため
+* 当社の商品、サービス等のご案内のため
+* 当社サービスに関する当社の規約、ポリシー等（以下「規約等」といいます。）に違反する行為に対する対応のため
+* 当社サービスに関する規約等の変更などを通知するため
+* 当社のサービスの改善、新サービスの開発等に役立てるため
+* 当社のサービスに関連して、個人を識別できない形式に加工した統計データを作成するため
+* 当社のウェブサイト上において、他の利用者の検索、閲覧に供するため
+* その他、上記利用目的に付随する目的のため
+
+### 本アプリが入手する個人情報
+
+当方が配信するアプリでは、広告配信のためにGoogle AdMob、利用状況解析のためにGoogle Firebase Analyticsを使用する場合がございます。
+
+取得する情報、利用目的、第三者への提供等の詳細につきましては、以下のプライバシーポリシーのリンクよりご確認ください。
+
+[AdMob (Google inc.)](https://policies.google.com/technologies/ads?hl=ja)
+
+[Firebase Analytics (Google inc.)](https://policies.google.com/privacy?hl=ja%EF%BB%BF)
+
+
+また当方が配信するアプリではGoogleカレンダーサービスと連携してタイマーの記録を
+スケジュールに残す機能を提供しています。
+Google Calendar APIを利用しGoogleカレンダーとの間で以下の操作を行うことができます （以下、Googleカレンダー連携）。
+
+- 予定及びリソース情報の取得（目的：当アプリによる予定追加のため）
+- 予定の登録（目的：当アプリによる予定追加のため）
+- 予定の削除（目的：当アプリによって追加された予定削除のため）
+
+Googleカレンダー連携の利用は、サービス上でお客様が同意した場合に限ります。
+取得したデータに関しましては、上記プライバシーポリシーに則り適切に管理・利用させていただきます。
+Google Calendar APIについて、およびGoogle社のプライバシーポリシーについては以下をご覧ください。
+
+[Google Calendar API](https://developers.google.com/calendar)
+
+[Google社プライバシーポリシー](https://www.google.com/intl/ja/policies/privacy/)
+
+
+
+
+### 本アプリで行われないこと
+
+- Googleアカウントの不正利用
+- Googleカレンダー情報の不正利用
+- 名前、住所など個人を特定しうる情報の保持
+- gmailの不正利用
+
+本アプリはタイマーに合わせてGoogleカレンダに記録するアプリですが、行われるのはカレンダーへの追加のみであり、
+ユーザーのデータの改竄、削除、更新などは行われません。
+
+### 本プライバシーポリシーに関して
+
+本プライバシーポリシーにおいて不明点などありましたら以下のメールアドレスへご連絡お願い致します。
+
+tomoya.dev@gmail.com
+
+`
+
 export default function privacyPage() {
   return (
     <div>
@@ -82,10 +147,18 @@ export default function privacyPage() {
       <div className={styles.policyPageWrap}>
         <div className={styles.policyHeading}>
           <Typography variant="h4">
-            記録タイマー利用規約
+            記録タイマー・利用規約
           </Typography>
         </div>
-        <ReactMarkdown source={input}/>
+        <ReactMarkdown source={usage}/>
+      </div>
+      <div className={styles.policyPageWrap}>
+      <div className={styles.policyHeading}>
+          <Typography variant="h4">
+            記録タイマー・プライバシーポリシー
+          </Typography>
+        </div>
+        <ReactMarkdown source={policy}/>
       </div>
       <footer className={styles.footer}>
         <div className={styles.footerLogo}>
