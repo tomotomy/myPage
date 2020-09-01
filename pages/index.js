@@ -13,6 +13,7 @@ export default function Home() {
       <Head>
         <title>TomoDev</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="Hjz90EGXVVnIy2SlAL_2wW-L7F5g5Jad-mb-WGfjFts" />
       </Head>
       <Header />
       <main className={styles.main}>
